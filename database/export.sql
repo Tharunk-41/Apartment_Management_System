@@ -94,7 +94,7 @@ CREATE TABLE `employee` (
   `block_no` int DEFAULT NULL,
   PRIMARY KEY (`emp_id`),
   KEY `block_no` (`block_no`),
-  CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`block_no`) REFERENCES `block` (`block_no`)
+  CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`block_no`) REFERENCES `room` (`block_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -178,8 +178,7 @@ CREATE TABLE `room` (
   PRIMARY KEY (`room_no`),
   UNIQUE KEY `parking_slot` (`parking_slot`),
   UNIQUE KEY `reg_no` (`reg_no`),
-  KEY `block_no` (`block_no`),
-  CONSTRAINT `room_ibfk_1` FOREIGN KEY (`block_no`) REFERENCES `block` (`block_no`)
+  KEY `block_no` (`block_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
