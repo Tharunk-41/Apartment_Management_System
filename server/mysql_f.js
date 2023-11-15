@@ -51,7 +51,6 @@ function getdata(tablename,callback)
     })
 }
 
-
 //add an owner tuple to the table
 function createowner(values,callback)
 {
@@ -70,8 +69,6 @@ function createownerproof(values,callback)
         callback(err,results);
     })
 }
-
-
 
 //book a parking slot for the tenant
 function bookslot(values,callback)
